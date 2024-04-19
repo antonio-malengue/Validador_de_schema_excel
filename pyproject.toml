@@ -1,0 +1,5 @@
+
+[tool.taskipy.tasks]
+run = "python src/iniciar_interface.py"
+test = "python src/iniciar_testes.py"
+limpar ="clear"
