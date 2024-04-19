@@ -1,5 +1,6 @@
 from frontend import ExcelValidadorUI
 #from backend import process_excel, save_dataframe_to_sql
+from backend import process_excel
 #from dotenv import load_dotenv
 #import sentry_sdk
 import os
@@ -19,12 +20,13 @@ def main():
     ui.display_header()
     #ui.upload_file()
 
-   # uploaded_file = ui.upload_file()
-"""
+    uploaded_file = ui.upload_file()
+
     if uploaded_file:
-        #df, result, errors = process_excel(uploaded_file)
+        df, result, errors = process_excel(uploaded_file)
         ui.display_results(result, errors)
 
+"""
         if errors:
             ui.display_wrong_message()
             sentry_sdk.capture_message("Erro ao subir excel")

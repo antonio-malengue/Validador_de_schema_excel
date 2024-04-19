@@ -1,10 +1,10 @@
-from iniciar_testes import matar_processo as mp
+from matar_processo import matar_processo
 import subprocess
 
 
 def executar_interface():
     #mata o processo antes de rodar a interface
-    mp()
+    matar_processo()
     # Executar os testes com pytest
     comando = "streamlit run src/app.py"
     #subprocess.run(comando, shell=True)
