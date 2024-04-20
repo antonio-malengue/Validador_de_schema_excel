@@ -2,7 +2,7 @@
 
 Nosso projeto:
 
-https://lvgalvao-workshop-aberto-aovivo-srcapp-508jxg.streamlit.app/
+https://validadordexcel.streamlit.app/
 
 1. Clone o repositório:
 ```bash
