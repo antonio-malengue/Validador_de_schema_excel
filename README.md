@@ -7,7 +7,7 @@ https://validadordexcel.streamlit.app/
 1. Clone o repositório:
 ```bash
 git clone https://github.com/antonio-malengue/Validador_de_schema_excel.git
-cd Workshop-aberto-aovivo
+cd Validador_de_schema_excel
 ```
 2. Configure a versão correta do Python com `pyenv`:
 ```bash
