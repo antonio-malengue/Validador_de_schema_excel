@@ -39,5 +39,5 @@ def main():
         #     logging.error("Test")
 
 if __name__ == "__main__":
-    print("main bloqueada - dev")
+    print("teste - dev")
     main()
