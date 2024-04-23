@@ -1,4 +1,4 @@
- name: ci
+name: ci
 on:
   push:
     branches: [ main ]
@@ -23,7 +23,7 @@ jobs:
 
       - name: Rodar os testes
         run: pytest tests/test_unit.py        
-        
+
       - name: Segundo Passo
         run: echo $(ls)
 
