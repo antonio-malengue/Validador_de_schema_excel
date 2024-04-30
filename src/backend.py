@@ -1,9 +1,8 @@
 import pandas as pd
 from contrato import Vendas
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 import os
 
-"""
 load_dotenv(".env")
 
 # Lê as variáveis de ambiente
@@ -18,7 +17,7 @@ DATABASE_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST
 
 # Carrega as variáveis de ambiente
 load_dotenv()
-"""
+
 def process_excel(uploaded_file):
     try:
         df = pd.read_excel(uploaded_file)
@@ -37,11 +36,11 @@ def process_excel(uploaded_file):
 
         # Retorna tanto o resultado da validação, os erros, quanto o DataFrame
         return df, True, erros
-    
+
     except Exception as e:
         # Se houver exceção, retorna o erro e um DataFrame vazio
-        return pd.DataFrame(), False, f"Erro inesperado: {str(e)}"
+        return pd.DataFrame(), f"Erro inesperado: {str(e)}"
     
-# def save_dataframe_to_sql(df):
-#     # Salva o DataFrame no banco de dados
-#     df.to_sql('vendas', con=DATABASE_URL, if_exists='replace', index=False)
+def save_dataframe_to_sql(df):
+    # Salva o DataFrame no banco de dados
+    df.to_sql('vendas', con=DATABASE_URL, if_exists='replace', index=False)
